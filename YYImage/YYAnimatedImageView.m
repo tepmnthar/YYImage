@@ -228,6 +228,10 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     return self;
 }
 
+- (void)layoutSublayersOfLayer:(CALayer *)layer {
+    [layer setNeedsDisplay];
+}
+
 // init the animated params.
 - (void)resetAnimated {
     if (!_link) {
